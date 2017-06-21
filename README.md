@@ -187,7 +187,6 @@ end
 ```
 
 
-<a name="configure" />
 ## Configure
 
 * [host](#host)
@@ -217,7 +216,6 @@ add_swagger_documentation \
   base_path: proc { |request| request.host =~ /^example/ ? '/api-example' : '/api' }
 ```
 
-<a name="host" />
 #### host:
 Sets explicit the `host`, default would be taken from `request`.
 ```ruby
@@ -225,7 +223,6 @@ add_swagger_documentation \
    host: 'www.example.com'
 ```
 
-<a name="base_path" />
 #### base_path:
 Base path of the API that's being exposed, default would be taken from `request`.
 ```ruby
@@ -235,7 +232,6 @@ add_swagger_documentation \
 
 `host` and `base_path` are also accepting a `proc` or `lambda`
 
-<a name="mount_path" />
 #### mount_path:
 The path where the API documentation is loaded, default is: `/swagger_doc`.
 ```ruby
@@ -259,7 +255,6 @@ add_swagger_documentation \
    add_version: true
 ```
 
-<a name="doc_version" />
 #### doc_version:
 Specify the version of the documentation at [info section](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#info-object), default is: `'0.0.1'`
 ```ruby
@@ -267,7 +262,6 @@ add_swagger_documentation \
    doc_version: '0.0.1'
 ```
 
-<a name="markdown" />
 #### markdown:
 Allow markdown in `detail`, default is `false`. (disabled) See [below](#md_usage) for details.
 
@@ -281,7 +275,6 @@ add_swagger_documentation \
   markdown: GrapeSwagger::Markdown::RedcarpetAdapter.new
 ```
 
-<a name="endpoint_auth_wrapper" />
 #### endpoint_auth_wrapper:
 Specify the middleware to use for securing endpoints.
 
@@ -290,7 +283,6 @@ add_swagger_documentation \
    endpoint_auth_wrapper: WineBouncer::OAuth2
 ```
 
-<a name="swagger_endpoint_guard" />
 #### swagger_endpoint_guard:
 Specify the method and auth scopes, used by the middleware for securing endpoints.
 
@@ -299,7 +291,6 @@ add_swagger_documentation \
    swagger_endpoint_guard: 'oauth2 false'
 ```
 
-<a name="token_owner" />
 #### token_owner:
 Specify the token_owner method, provided by the middleware, which is typically named 'resource_owner'.
 
@@ -308,7 +299,6 @@ add_swagger_documentation \
    token_owner: 'resource_owner'
 ```
 
-<a name="security_definitions" />
 #### security_definitions:
 Specify the [Security Definitions Object](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#security-definitions-object)
 
